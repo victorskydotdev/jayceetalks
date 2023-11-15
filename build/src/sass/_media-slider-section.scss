@@ -1,0 +1,122 @@
+@import 'resets';
+
+.media-slider-section {
+	margin-bottom: 5em;
+	overflow-x: hidden;
+
+	.container {
+		@include sm-widthSize();
+		margin-bottom: 2em;
+
+		.heading-text {
+			font-size: $font-size;
+			line-height: $line-height;
+		}
+	}
+
+	.media-slider-container {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		white-space: no-wrap;
+		display: flex;
+		gap: 10px;
+		margin-bottom: 10px;
+
+		.slider {
+			animation: slide 20s linear infinite;
+			display: inline-block;
+			transition: transform 0.5s ease-in-out;
+
+			display: flex;
+			gap: 10px;
+
+			.media {
+				height: 300px;
+				width: 270px;
+				background: teal;
+				border-radius: 10px;
+			}
+
+			.img1 {
+				background: url('/assets/slider-imgs/img1.jpg') center/cover, no-repeat;
+			}
+			.img2 {
+				background: url('/assets/slider-imgs/img2.jpg') center/cover, no-repeat;
+			}
+			.img3 {
+				background: url('/assets/slider-imgs/img3.jpg') center/cover, no-repeat;
+			}
+			.img4 {
+				background: url('/assets/slider-imgs/img4.jpg') center/cover, no-repeat;
+			}
+			.img5 {
+				background: url('/assets/slider-imgs/img5.jpg') center/cover, no-repeat;
+			}
+			.img6 {
+				background: url('/assets/slider-imgs/img6.jpg') center/cover, no-repeat;
+			}
+		}
+	}
+
+	.media-slider-container2 {
+		width: 100%;
+		// overflow: hidden;
+		position: relative;
+		white-space: no-wrap;
+		display: flex;
+		gap: 10px;
+
+		.slider {
+			animation: slide2 20s linear infinite;
+			display: inline-block;
+			transition: transform 0.5s ease-in-out;
+
+			display: flex;
+			gap: 10px;
+
+			.media {
+				height: 300px;
+				width: 280px;
+				background: teal;
+				border-radius: 10px;
+			}
+
+			.img1 {
+				background: url('/assets/slider-imgs/img7.png') center/cover, no-repeat;
+			}
+			.img2 {
+				background: url('/assets/slider-imgs/img8.png') center/cover, no-repeat;
+			}
+			.img3 {
+				background: url('/assets/slider-imgs/img9.png') center/cover, no-repeat;
+			}
+			.img4 {
+				background: url('/assets/slider-imgs/img10.png') center/cover, no-repeat;
+			}
+			.img5 {
+				background: url('/assets/slider-imgs/img11.png') center/cover, no-repeat;
+			}
+		}
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes slide2 {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

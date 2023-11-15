@@ -1,0 +1,167 @@
+@import 'resets';
+
+.header-nav {
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+
+	.container {
+		@include sm-widthSize();
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.brand {
+			padding-top: 0.5em;
+			.brand-logo {
+				inline-size: 100px;
+			}
+		}
+
+		.nav-links {
+			.wrap {
+				display: flex;
+				gap: 100px;
+			}
+		}
+
+		.btn-wrap {
+			.btn {
+				@include btn();
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
+
+		@media screen and (max-width: 62em) {
+			display: block;
+			position: relative;
+
+			.nav-links {
+				background: $dark-color;
+				padding: 2em 0;
+				width: 50%;
+				position: fixed;
+				right: 5%;
+				min-height: 450px;
+				z-index: 3;
+				border-radius: 20px;
+				display: none;
+				// padding: 10em 0;
+				padding-top: 6em;
+
+				.wrap {
+					display: grid;
+					gap: 3em;
+					justify-content: end;
+					text-align: right;
+					padding-right: 2em;
+					color: #fff;
+				}
+			}
+
+			.btn-wrap {
+				position: fixed;
+				right: 80px;
+				z-index: 3;
+				top: 63%;
+				display: none;
+			}
+
+			.hamburger {
+				display: block;
+				align-items: center;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				border-radius: 10px;
+				width: fit-content;
+				height: 50%;
+				padding: 0.3em;
+
+				border-radius: 10px;
+				cursor: pointer;
+
+				.line {
+					display: block;
+					height: 2px;
+					width: 40px;
+					background: $dark-color;
+					position: relative;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: -450%;
+						left: 0;
+						width: 30px;
+						background: $dark-color;
+						height: 2px;
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 450%;
+						left: 0;
+						width: 20px;
+						background: $dark-color;
+						height: 2px;
+					}
+				}
+			}
+
+			.close-btn {
+				height: 30px;
+				width: 30px;
+				position: fixed;
+				top: 7%;
+				right: 11%;
+				display: none;
+				align-items: center;
+				cursor: pointer;
+
+				.close-btn-line {
+					background: $dark-color;
+					width: 40px;
+					height: 2px;
+					transform: rotate(45deg);
+					position: relative;
+
+					&::after {
+						content: '';
+						position: absolute;
+						transform: rotate(-90deg);
+						background: $dark-color;
+						width: 40px;
+						height: 2px;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 43em) {
+			.nav-links {
+				width: 100%;
+				right: 0;
+
+				.wrap {
+					justify-content: center;
+					text-align: center;
+					padding-right: 0;
+				}
+			}
+
+			.btn-wrap.btn-wrap {
+				// background: teal;
+				white-space: nowrap;
+				width: 100%;
+				left: 0;
+				text-align: center;
+			}
+		}
+	}
+}

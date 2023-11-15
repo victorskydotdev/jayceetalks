@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- stylesheet -->
+		<link rel="stylesheet" href="/dest/css/main.css" />
+
+		<!-- font awesome icon -->
+		<script
+			src="https://kit.fontawesome.com/8464da9b67.js"
+			crossorigin="anonymous"></script>
+
+		<!-- dynamic title -->
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% include "header.njk" %}
+		{{ content | safe }}
+		{% include "footer.njk" %}
+
+		<script src="/dest/javascript/script.js"></script>
+	</body>
+</html>
