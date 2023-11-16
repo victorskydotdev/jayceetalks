@@ -1,0 +1,60 @@
+@import 'resets';
+
+.form-section {
+	margin-bottom: 7em;
+
+	.container {
+		@include sm-widthSize();
+
+		.text {
+			max-width: 400px;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
+		.form {
+			.input-wrap {
+				margin-bottom: 1em;
+
+				&:nth-child(3) {
+					margin-bottom: 1.5em;
+				}
+
+				.input {
+					width: 100%;
+					border: 1.5px solid $accent-color;
+					outline: none;
+					padding: 1em 0.5em;
+					border-radius: 15px;
+				}
+			}
+
+			.message-wrap {
+				margin-bottom: 1em;
+				textarea {
+					width: 100%;
+					border: 1.5px solid $accent-color;
+					outline: none;
+					padding: 1em 0.5em;
+					border-radius: 15px;
+					height: 200px;
+				}
+			}
+
+			.btn {
+				@include btn();
+			}
+
+			@media screen and (min-width: 43em) {
+				width: 60%;
+				margin: 0 auto;
+			}
+
+			@media screen and (min-width: 62em) {
+				width: 45%;
+				margin: 0 auto;
+			}
+		}
+	}
+}

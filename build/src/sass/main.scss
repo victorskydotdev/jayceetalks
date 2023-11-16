@@ -3,5 +3,10 @@
 @use 'about-section';
 @use 'media-slider-section';
 @use 'service-section';
+@use 'brands_section';
 @use 'review-section';
 @use 'footer';
+
+// contact page styles
+@use 'contact-section';
+@use 'contact_form';

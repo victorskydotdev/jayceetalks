@@ -1,0 +1,31 @@
+@import 'resets';
+
+.brands-section {
+	margin-bottom: 10em;
+
+	.container {
+		@include sm-widthSize;
+
+		.title {
+			text-align: center;
+			font-size: $font-size;
+			margin-bottom: 2em;
+		}
+
+		.brands-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 3em;
+			flex-wrap: wrap;
+
+			.brand-img {
+				width: 100px;
+
+				&:nth-child(4) {
+					border-radius: 110%;
+				}
+			}
+		}
+	}
+}

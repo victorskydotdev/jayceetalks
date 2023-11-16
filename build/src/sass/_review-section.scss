@@ -2,11 +2,11 @@
 
 .text-wrapper {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	margin-bottom: 1.5em;
 
 	.title {
-		width: 95%;
+		// width: 95%;
 		font-size: $font-size;
 	}
 }
@@ -14,23 +14,26 @@
 .review-section {
 	display: flex;
 	// justify-content: flex-end;
+	margin-bottom: 10em;
 
 	.container {
-		background: #000;
+		// background: #000;
 		min-height: 350px;
 		width: 100%;
 		overflow: hidden;
 		display: flex;
+		gap: 2em;
 
 		.wrapper {
 			display: flex;
 			gap: 2em;
-			padding: 0 2em;
-			animation: sliderAnimation 20s infinite;
+			// padding: 0 2em;
+			animation: sliderAnimation 20s infinite 5s;
 
 			.review-card {
-				height: 400px;
+				height: 350px;
 				width: 400px;
+				border-radius: 20px;
 
 				&:nth-child(1) {
 					background: url('/assets/review-imgs/img1.png') center/cover,
@@ -57,23 +60,39 @@
 }
 
 @keyframes sliderAnimation {
+	// 0% {
+	// 	transform: translateX(0);
+	// }
+
+	// 25% {
+	// 	transform: translateX(-25%);
+	// }
+
+	// 50% {
+	// 	transform: translateX(-50%);
+	// }
+
+	// 75% {
+	// 	transform: translateX(-75%);
+	// }
+
+	// 50% {
+	// 	transform: translateX(-50%);
+	// }
+
 	0% {
 		transform: translateX(0);
 	}
-
 	25% {
 		transform: translateX(-25%);
 	}
-
 	50% {
 		transform: translateX(-50%);
 	}
-
 	75% {
-		transform: translateX(-75%);
+		transform: translateX(50px);
 	}
-
 	100% {
-		transform: translateX(-100%);
+		transform: translateX(0);
 	}
 }

@@ -4,6 +4,22 @@ const navMenu = document.querySelectorAll('.menu');
 const hamburgerBtn = document.querySelector('.hamburger');
 const menuCloseBtn = document.querySelector('.close-btn');
 
+const navbar = document.querySelector('.header-nav');
+
+const changeNavShadow = () => {
+	window.addEventListener('scroll', () => {
+		const scrollY = window.scrollY;
+
+		if (scrollY > 50) {
+			navbar.classList.add('box-shadow');
+		} else {
+			navbar.classList.remove('box-shadow');
+		}
+	});
+};
+
+changeNavShadow();
+
 const activateMenu = () => {
 	hamburgerBtn.addEventListener('click', () => {
 		navMenu.forEach((clickItem) => {
@@ -24,8 +40,7 @@ const activateMenu = () => {
 	});
 };
 
-const alertMessage =
-	'the variable script file is connecting to the main js file and reaching the DOM';
+const alertMessage = 'Datanot available at the moment.';
 
 const showMessage = () => {
 	alert(alertMessage);
