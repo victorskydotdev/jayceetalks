@@ -93,6 +93,7 @@
 					text-align: right;
 					padding-right: 2em;
 					color: #fff;
+					margin-bottom: 2.8em;
 
 					.link {
 						a {
@@ -102,13 +103,13 @@
 				}
 			}
 
-			.btn-wrap {
-				position: fixed;
-				right: 80px;
-				z-index: 3;
-				top: 63%;
-				display: none;
-			}
+			// .btn-wrap {
+			// 	position: fixed;
+			// 	right: 80px;
+			// 	z-index: 3;
+			// 	top: 63%;
+			// 	display: none;
+			// }
 
 			.hamburger {
 				display: block;
