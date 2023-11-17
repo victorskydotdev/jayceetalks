@@ -30,9 +30,9 @@ const openModal = () => {
 					// Get the path to the audio file from the 'data-audio' attribute
 					const audioPath = playButton.getAttribute('data-audio');
 
-					playButton.textContent = 'Pause Audio';
+					const playContext = 'Pause Audio';
+					playButton.textContent = playContext;
 
-					// Set the 'src' attribute of the audio player to the selected audio file
 					audioPlayer.src = audioPath;
 
 					// Play the audio
