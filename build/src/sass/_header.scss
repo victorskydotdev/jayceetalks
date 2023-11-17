@@ -20,6 +20,11 @@
 		}
 
 		.nav-links {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 65%;
+
 			.wrap {
 				display: flex;
 				gap: 100px;
@@ -49,11 +54,11 @@
 					}
 				}
 			}
-		}
 
-		.btn-wrap {
-			.btn {
-				@include btn();
+			.btn-wrap {
+				.btn {
+					@include btn();
+				}
 			}
 		}
 
