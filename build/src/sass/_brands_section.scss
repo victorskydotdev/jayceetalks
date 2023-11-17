@@ -2,6 +2,8 @@
 
 .brands-section {
 	margin-bottom: 10em;
+	position: relative;
+	z-index: 10;
 
 	.container {
 		@include sm-widthSize;

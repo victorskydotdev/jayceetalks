@@ -2,6 +2,7 @@
 
 .services-section {
 	margin-bottom: 10em;
+	padding-top: 8em;
 	.container {
 		@include sm-widthSize();
 
@@ -49,6 +50,12 @@
 					@include btn();
 					background: $dark-color;
 					border: none;
+					color: #fff;
+				}
+
+				.btn {
+					@include btn();
+					background: $dark-color;
 					color: #fff;
 				}
 			}

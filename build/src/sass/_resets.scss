@@ -46,6 +46,7 @@ li {
 @mixin btn() {
 	border: none;
 	background: $accent-color;
+	color: $dark-color;
 	font-family: $font-family;
 	font-size: 1rem;
 	padding: 1em 1.5em;

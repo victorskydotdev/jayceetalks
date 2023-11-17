@@ -1,4 +1,3 @@
-// import { alertMessage } from './js_scripts/variables';
 // variables
 const navMenu = document.querySelectorAll('.menu');
 const hamburgerBtn = document.querySelector('.hamburger');
@@ -17,8 +16,6 @@ const changeNavShadow = () => {
 		}
 	});
 };
-
-changeNavShadow();
 
 const activateMenu = () => {
 	hamburgerBtn.addEventListener('click', () => {
@@ -40,22 +37,6 @@ const activateMenu = () => {
 	});
 };
 
-const alertMessage = 'Datanot available at the moment.';
-
-const showMessage = () => {
-	alert(alertMessage);
-};
-
-const clickBtns = document.querySelectorAll('.learn-more-btn');
-
-const triggerAlert = () => {
-	clickBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			showMessage();
-		});
-	});
-};
-
 // Call the functions
+changeNavShadow();
 activateMenu();
-triggerAlert();

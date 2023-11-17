@@ -1,0 +1,119 @@
+@import 'resets';
+
+.modal-container {
+	height: 90vh;
+	width: 90%;
+	position: fixed;
+	background: $dark-color;
+	z-index: 11;
+	top: 3%;
+	left: 5%;
+	border-radius: 20px;
+	transform: translateY(-110%);
+	transition: all 500ms ease-in-out;
+	opacity: 0;
+	padding-top: 2em;
+
+	.modal-close-btn {
+		position: absolute;
+		right: 3%;
+		top: 2%;
+		background: none;
+		border: none;
+		color: red;
+		background: #fff;
+		font-size: 1.3em;
+		cursor: pointer;
+		padding: 0.5em 0.77em;
+		border-radius: 100%;
+	}
+
+	.wrap {
+		width: 90%;
+		margin: 0 auto;
+
+		.audio-container {
+			margin-bottom: 2em;
+
+			.title {
+				color: #fff;
+				margin-bottom: 0.7em;
+			}
+
+			.audio-option {
+				cursor: pointer;
+				padding: 10px;
+				margin: 5px;
+				background-color: $accent-color;
+				color: $dark-color;
+				border-radius: 20px;
+				display: inline-block;
+			}
+		}
+
+		.brand-influecing-container {
+			margin-bottom: 2em;
+
+			.title {
+				color: #fff;
+				margin-bottom: 0.7em;
+			}
+
+			.data-wrap {
+				.text {
+					color: #fff;
+				}
+			}
+		}
+
+		.videos-container {
+			.title {
+				color: #fff;
+				margin-bottom: 0.7em;
+			}
+
+			.data-wrap {
+				.youtube-btn {
+					@include btn();
+					padding: 10px;
+
+					i {
+						display: inline-block;
+						margin-right: 0.3em;
+						color: red;
+					}
+				}
+
+				.instagram-btn {
+					@include btn();
+					padding: 10px;
+
+					i {
+						display: inline-block;
+						margin-right: 0.3em;
+						// color: red;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 70%;
+		}
+
+		// @media screen and (min-width: 62em) {
+		// 	width: 50%;
+		// }
+	}
+
+	@media screen and (min-width: 62em) {
+		width: 70%;
+		left: 15%;
+	}
+}
+
+.show-modal {
+	display: block;
+	transform: translateY(3%);
+	opacity: 1;
+}

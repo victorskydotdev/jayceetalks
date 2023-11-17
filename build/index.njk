@@ -12,11 +12,11 @@ layout: 'base.njk'
 			</h1>
 
 			<p class="masthead-paragraph">
-				On-air personality, fashion model, brand influencer, and social media
-				strategist.
+				Event host, media personality, fashion model, brand influencer, and
+				social media strategist.
 			</p>
 
-			<button class="btn">Contact Jaycee</button>
+			<a href="/contact" class="btn">Contact Jaycee</a>
 		</div>
 
 		<div class="fixed-img-wrap">
@@ -33,7 +33,7 @@ layout: 'base.njk'
 	</div>
 </main>
 
-<section class="about-section">
+<section class="about-section" id="about">
 	<img class="fixed-img" src="/assets/waves.png" alt="" />
 	<div class="about-section__container">
 		<div class="wrap">
@@ -124,7 +124,7 @@ layout: 'base.njk'
 	</div>
 </section>
 
-<section class="services-section">
+<section class="services-section" id="services">
 	<div class="container">
 		<div class="title-wrap">
 			<h3 class="heading-text">Our services</h3>
@@ -181,7 +181,7 @@ layout: 'base.njk'
 					radio/tv stations in Nigeria,
 				</p>
 
-				<button class="learn-more-btn">Learn more</button>
+				<a href="/contact" class="btn">contact Jaycee</a>
 			</div>
 		</div>
 	</div>
@@ -239,3 +239,78 @@ layout: 'base.njk'
 		</div>
 	</div>
 </section>
+
+<!-- modal section -->
+<div class="modal-container">
+	<button class="modal-close-btn">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+
+	<div class="wrap">
+		<div class="audio-container">
+			<h4 class="title">Voice over and Jingles</h4>
+
+			<div class="audio-files">
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 1
+				</div>
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 2
+				</div>
+
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 3
+				</div>
+
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 4
+				</div>
+
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 5
+				</div>
+
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 6
+				</div>
+
+				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
+					Play Audio 7
+				</div>
+
+				<!-- Audio player -->
+				<audio id="audioPlayer">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
+
+		<div class="brand-influecing-container">
+			<h4 class="title">Brand Influencing</h4>
+
+			<div class="data-wrap">
+				<p class="text">
+					With a combined <strong>+150k</strong> followers across social media
+					platforms such as Facebook, Instagram, Tiktok, and X, we can guarentee
+					that your brand can get to the right audience
+				</p>
+			</div>
+		</div>
+
+		<div class="videos-container">
+			<h4 class="title">Video Adverts</h4>
+
+			<div class="data-wrap">
+				<a href="https://www.youtube.com/@chat360withjaycee" class="youtube-btn"
+					><i class="fa-brands fa-youtube"></i>Visit Youtube</a
+				>
+
+				<a
+					href="https://www.instagram.com/reel/CsRTdwZIAv1/?igshid=MzRlODBiNWFlZA=="
+					class="instagram-btn"
+					><i class="fa-brands fa-instagram"></i>Visit Instagram</a
+				>
+			</div>
+		</div>
+	</div>
+</div>

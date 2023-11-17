@@ -4,7 +4,7 @@
 	background: #fff;
 	position: fixed;
 	width: 100%;
-	z-index: 10;
+	z-index: 11;
 
 	.container {
 		@include sm-widthSize();
@@ -58,6 +58,7 @@
 			.btn-wrap {
 				.btn {
 					@include btn();
+					color: $dark-color;
 				}
 			}
 		}
