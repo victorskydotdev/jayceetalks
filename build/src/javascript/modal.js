@@ -2,20 +2,6 @@ const container = document.querySelector('.modal-container');
 const clickBtns = document.querySelectorAll('.learn-more-btn');
 const modalClose = document.querySelector('.modal-close-btn');
 
-// const showModal = () => {
-// 	const modalContent = `
-//   <div class="modal">
-//     <div class="modal-content">
-//       <img src="${productData.image}" alt="${productData.name}" />
-//       <h2>${productData.name}</h2>
-//       <p>${productData.description}</p>
-//       <p>Price: $${productData.price.toFixed(2)}</p>
-//       <button class="close-modal">Close</button>
-//     </div>
-//   </div>
-//   `;
-// };
-
 const openModal = () => {
 	clickBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
@@ -30,13 +16,25 @@ const openModal = () => {
 					// Get the path to the audio file from the 'data-audio' attribute
 					const audioPath = playButton.getAttribute('data-audio');
 
-					const playContext = 'Pause Audio';
+					// You may want to update the play button text/content accordingly
+					const playContext = audioPlayer.paused ? 'Play Audio' : 'Pause Audio';
 					playButton.textContent = playContext;
 
-					audioPlayer.src = audioPath;
+					// Toggle play/pause
+					if (audioPlayer.src === audioPath && !audioPlayer.paused) {
+						audioPlayer.pause();
+					} else {
+						audioPlayer.src = audioPath;
+						audioPlayer.play();
+					}
 
-					// Play the audio
-					audioPlayer.play();
+					// const playContext = 'Pause Audio';
+					// playButton.textContent = playContext;
+
+					// audioPlayer.src = audioPath;
+
+					// // Play the audio
+					// audioPlayer.play();
 				});
 			});
 		});

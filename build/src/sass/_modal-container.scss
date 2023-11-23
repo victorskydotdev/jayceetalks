@@ -62,6 +62,12 @@
 			.data-wrap {
 				.text {
 					color: #fff;
+					margin-bottom: 0.7em;
+				}
+
+				.our-work {
+					@include btn();
+					padding: 10px;
 				}
 			}
 		}
@@ -73,26 +79,9 @@
 			}
 
 			.data-wrap {
-				.youtube-btn {
+				.our-work {
 					@include btn();
 					padding: 10px;
-
-					i {
-						display: inline-block;
-						margin-right: 0.3em;
-						color: red;
-					}
-				}
-
-				.instagram-btn {
-					@include btn();
-					padding: 10px;
-
-					i {
-						display: inline-block;
-						margin-right: 0.3em;
-						// color: red;
-					}
 				}
 			}
 		}

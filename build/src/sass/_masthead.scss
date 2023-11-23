@@ -105,3 +105,40 @@
 		}
 	}
 }
+
+/* Define a simple fade-in animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-70%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+/* Apply the animation to the masthead title */
+.animate-fade-in {
+	animation: fadeIn 1s ease-in-out;
+}
+.animate-fade-in2 {
+	animation: fadeIn 1s ease-in-out;
+}
+.animate-fade-in3 {
+	animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes imgFadeIn {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.animate-img {
+	animation: imgFadeIn 1s ease-in;
+}
