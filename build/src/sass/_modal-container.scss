@@ -1,18 +1,18 @@
 @import 'resets';
 
 .modal-container {
-	height: 90vh;
+	min-height: 200px;
 	width: 90%;
 	position: fixed;
 	background: $dark-color;
 	z-index: 11;
-	top: 3%;
+	top: 20%;
 	left: 5%;
 	border-radius: 20px;
-	transform: translateY(-110%);
+	transform: translateY(-160%);
 	transition: all 500ms ease-in-out;
 	opacity: 0;
-	padding-top: 2em;
+	padding: 3em 0;
 
 	.modal-close-btn {
 		position: absolute;
@@ -33,7 +33,7 @@
 		margin: 0 auto;
 
 		.audio-container {
-			margin-bottom: 2em;
+			// margin-bottom: 2em;
 
 			.title {
 				color: #fff;
@@ -52,7 +52,7 @@
 		}
 
 		.brand-influecing-container {
-			margin-bottom: 2em;
+			// margin-bottom: 2em;
 
 			.title {
 				color: #fff;
@@ -87,7 +87,7 @@
 		}
 
 		@media screen and (min-width: 43em) {
-			width: 70%;
+			width: 60%;
 		}
 
 		// @media screen and (min-width: 62em) {
@@ -96,8 +96,8 @@
 	}
 
 	@media screen and (min-width: 62em) {
-		width: 70%;
-		left: 15%;
+		width: 50%;
+		left: 25%;
 	}
 }
 

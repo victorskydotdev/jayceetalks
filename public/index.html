@@ -178,6 +178,7 @@
 		</div>
 
 		<div class="wrap">
+			<!-- event hosting -->
 			<div class="service-box-wrap">
 				<img src="/assets/fixed-img.png" alt="" class="fixed-img" />
 
@@ -188,9 +189,10 @@
 					Virtual Meetings, Product Lunch etc
 				</p>
 
-				<button class="learn-more-btn">Learn more</button>
+				<button class="learn-more-btn" id="event-btn">Learn more</button>
 			</div>
 
+			<!-- voice over -->
 			<div class="service-box-wrap">
 				<img src="/assets/fixed-img.png" alt="" class="fixed-img" />
 
@@ -201,9 +203,10 @@
 					and English.
 				</p>
 
-				<button class="learn-more-btn">Learn more</button>
+				<button class="learn-more-btn" id="vo-btn">Learn more</button>
 			</div>
 
+			<!-- brand influencing -->
 			<div class="service-box-wrap">
 				<img src="/assets/fixed-img.png" alt="" class="fixed-img" />
 
@@ -215,9 +218,10 @@
 					visibility.
 				</p>
 
-				<button class="learn-more-btn">Learn more</button>
+				<button class="learn-more-btn" id="brand-inf-btn">Learn more</button>
 			</div>
 
+			<!-- advert -->
 			<div class="service-box-wrap">
 				<img src="/assets/fixed-img.png" alt="" class="fixed-img" />
 
@@ -289,51 +293,95 @@
 	</div>
 </section>
 
-<!-- modal section -->
-<div class="modal-container">
-	<button class="modal-close-btn">
+<!-- event hosting modal three section -->
+<div class="modal-container" id="event-hosting">
+	<button class="video-close-button modal-close-btn">
 		<i class="fa-solid fa-xmark"></i>
 	</button>
 
 	<div class="wrap">
-		<div class="audio-container">
-			<h4 class="title">Voice over and Jingles</h4>
+		<div class="videos-container">
+			<h4 class="title">Event Hosting & Video Adverts</h4>
 
-			<div class="audio-files">
-				<div class="audio-option" data-audio="/assets/audio-files/audio1.mpeg">
-					Play Audio 1
-				</div>
-				<div class="audio-option" data-audio="/assets/audio-files/audio2.mpeg">
-					Play Audio 2
-				</div>
-
-				<div class="audio-option" data-audio="/assets/audio-files/audio3.mpeg">
-					Play Audio 3
-				</div>
-
-				<div class="audio-option" data-audio="/assets/audio-files/audio4.mpeg">
-					Play Audio 4
-				</div>
-
-				<div class="audio-option" data-audio="/assets/audio-files/audio5.mpeg">
-					Play Audio 5
-				</div>
-
-				<div class="audio-option" data-audio="/assets/audio-files/audio6.mpeg">
-					Play Audio 6
-				</div>
-
-				<div class="audio-option" data-audio="/assets/audio-files/audio7.mpeg">
-					Play Audio 7
-				</div>
-
-				<!-- Audio player -->
-				<audio id="audioPlayer" controls>
-					Your browser does not support the audio element.
-				</audio>
+			<div class="data-wrap">
+				<button class="our-work">Our work</button>
 			</div>
 		</div>
+	</div>
+</div>
+<!-- end of event hosting modal three section -->
 
+<!-- audio modal section -->
+<div class="modal-container" id="audio-modal">
+	<div class="modal wrapper">
+		<button class="audio-close-btn modal-close-btn">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+
+		<div class="wrap">
+			<div class="audio-container">
+				<h4 class="title">Voice over and Jingles</h4>
+
+				<div class="audio-files">
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio1.mpeg">
+						Play Audio 1
+					</div>
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio2.mpeg">
+						Play Audio 2
+					</div>
+
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio3.mpeg">
+						Play Audio 3
+					</div>
+
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio4.mpeg">
+						Play Audio 4
+					</div>
+
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio5.mpeg">
+						Play Audio 5
+					</div>
+
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio6.mpeg">
+						Play Audio 6
+					</div>
+
+					<div
+						class="audio-option"
+						data-audio="/assets/audio-files/audio7.mpeg">
+						Play Audio 7
+					</div>
+
+					<!-- Audio player -->
+					<audio id="audioPlayer" controls>
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end of audio modal section -->
+
+<!-- brand influecing modal two section -->
+<div class="modal-container" id="brand-influence">
+	<button class="modal-close-btn" id="brand-close-btn">
+		<i class="fa-solid fa-xmark"></i>
+	</button>
+
+	<div class="wrap">
 		<div class="brand-influecing-container">
 			<h4 class="title">Brand Influencing</h4>
 
@@ -347,16 +395,9 @@
 				<button class="our-work">Our work</button>
 			</div>
 		</div>
-
-		<div class="videos-container">
-			<h4 class="title">Event Hosting & Video Adverts</h4>
-
-			<div class="data-wrap">
-				<button class="our-work">Our work</button>
-			</div>
-		</div>
 	</div>
 </div>
+<!-- end of brand influencing modal two section -->
 
 <!-- link modal -->
 <div class="links-modal modal-box">

@@ -10,6 +10,8 @@ const filePath = {
 const sass = require('gulp-sass')(require('sass'));
 const prefixer = require('gulp-autoprefixer');
 const cssMinify = require('gulp-clean-css');
+// script
+const jsMinify = require('gulp-terser');
 
 const compileStyles = () => {
 	return src(filePath.cssPath)
@@ -18,9 +20,6 @@ const compileStyles = () => {
 		.pipe(cssMinify())
 		.pipe(dest('./build/dest/css/'));
 };
-
-// script
-const jsMinify = require('gulp-terser');
 
 const minifyScripts = () => {
 	return src(filePath.scriptPath)

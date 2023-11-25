@@ -1,48 +1,72 @@
-const container = document.querySelector('.modal-container');
-const clickBtns = document.querySelectorAll('.learn-more-btn');
-const modalClose = document.querySelector('.modal-close-btn');
+const container = document.querySelectorAll('.modal-container');
+
+const eventModal = document.getElementById('event-hosting');
+const eventBtn = document.getElementById('event-btn');
+const eventCloseBtn = document.querySelector('.video-close-button');
+
+const audioModal = document.getElementById('audio-modal');
+const voBtn = document.getElementById('vo-btn');
+const audioCloseBtn = document.querySelector('.audio-close-btn');
+
+const brandModal = document.getElementById('brand-influence');
+const brandBtn = document.getElementById('brand-inf-btn');
+const brandCloseBtn = document.getElementById('brand-close-btn');
 
 const openModal = () => {
-	clickBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			container.classList.add('show-modal');
+	eventBtn.addEventListener('click', () => {
+		eventModal.classList.add('show-modal');
 
-			const audioPlayer = document.getElementById('audioPlayer');
+		eventCloseBtn.addEventListener('click', () => {
+			eventModal.classList.remove('show-modal');
+		});
+	});
 
-			const audioOptions = document.querySelectorAll('.audio-option');
+	voBtn.addEventListener('click', () => {
+		audioModal.classList.add('show-modal');
 
-			audioOptions.forEach(function (playButton) {
-				playButton.addEventListener('click', function () {
-					// Get the path to the audio file from the 'data-audio' attribute
-					const audioPath = playButton.getAttribute('data-audio');
+		audioCloseBtn.addEventListener('click', () => {
+			audioModal.classList.remove('show-modal');
+		});
 
-					// You may want to update the play button text/content accordingly
-					const playContext = audioPlayer.paused ? 'Play Audio' : 'Pause Audio';
-					playButton.textContent = playContext;
+		const audioPlayer = document.getElementById('audioPlayer');
 
-					// Toggle play/pause
-					if (audioPlayer.src === audioPath && !audioPlayer.paused) {
-						audioPlayer.pause();
-					} else {
-						audioPlayer.src = audioPath;
-						audioPlayer.play();
-					}
+		const audioOptions = document.querySelectorAll('.audio-option');
 
-					// const playContext = 'Pause Audio';
-					// playButton.textContent = playContext;
+		audioOptions.forEach(function (playButton) {
+			playButton.addEventListener('click', function () {
+				// Get the path to the audio file from the 'data-audio' attribute
+				const audioPath = playButton.getAttribute('data-audio');
 
-					// audioPlayer.src = audioPath;
+				// You may want to update the play button text/content accordingly
+				const playContext = audioPlayer.paused ? 'Play Audio' : 'Pause Audio';
+				playButton.textContent = playContext;
 
-					// // Play the audio
-					// audioPlayer.play();
-				});
+				// Toggle play/pause
+				if (audioPlayer.src === audioPath && !audioPlayer.paused) {
+					audioPlayer.pause();
+				} else {
+					audioPlayer.src = audioPath;
+					audioPlayer.play();
+				}
 			});
 		});
+	});
+
+	brandBtn.addEventListener('click', () => {
+		brandModal.classList.add('show-modal');
+
+		if (brandCloseBtn) {
+			brandCloseBtn.addEventListener('click', () => {
+				brandModal.classList.remove('show-modal');
+			});
+		}
 	});
 };
 
 openModal();
 
-modalClose.addEventListener('click', () => {
-	container.classList.remove('show-modal');
-});
+// modalClose.forEach((closeBtn) => {
+// 	closeBtn.addEventListener('click', () => {
+// 		console.log('close button clicked');
+// 	});
+// });
