@@ -2,7 +2,7 @@
 
 .header-nav {
 	background: #fff;
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	z-index: 11;
 
@@ -15,7 +15,7 @@
 		.brand {
 			padding-top: 0.5em;
 			.brand-logo {
-				inline-size: 100px;
+				inline-size: 80px;
 			}
 		}
 

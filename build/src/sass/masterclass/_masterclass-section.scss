@@ -1,0 +1,44 @@
+@import '../resets';
+
+.masterclass-section {
+	padding: 5em 0;
+
+	.container {
+		// @include widthSize();
+		width: 90%;
+		margin: 0 auto;
+
+		.heading {
+			font-size: clamp(1vw, 7rem, 8vw);
+			margin-bottom: 1em;
+
+			@media screen and (min-width: 43em) {
+				font-size: 3rem;
+			}
+		}
+
+		.wrap {
+			display: grid;
+			gap: 1em;
+
+			.box-wrap {
+				min-height: 300px;
+				width: 100%;
+				background: $accent-color;
+				padding: 2em;
+
+				.title {
+					margin-bottom: 1.5em;
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 80%;
+		}
+	}
+}

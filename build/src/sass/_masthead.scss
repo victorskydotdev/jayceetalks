@@ -2,9 +2,13 @@
 
 .masthead-section {
 	margin-bottom: 5em;
+	min-height: 100vh;
+
 	.masthead-section__container {
-		padding: 18em 0 8em 0;
+		min-height: 600px;
 		position: relative;
+		display: flex;
+		align-items: center;
 
 		.wrap {
 			@include sm-widthSize();
@@ -62,7 +66,7 @@
 
 		.img-box {
 			background: teal;
-			height: 300px;
+			min-height: 300px;
 			width: 100%;
 			border-radius: 10px;
 
