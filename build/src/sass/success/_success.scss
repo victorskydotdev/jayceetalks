@@ -1,0 +1,56 @@
+@import '../resets';
+
+.success-main {
+	min-height: 85vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.fixed-img {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: #000;
+			opacity: 0.8;
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+
+		.heading {
+			color: #fff;
+			font-size: 2rem;
+			text-align: center;
+			margin-bottom: 1.5em;
+		}
+
+		.payment-wrap {
+			a {
+				@include btn();
+				margin-bottom: 0.4em;
+			}
+
+			.text {
+				color: #fff;
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

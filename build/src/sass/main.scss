@@ -18,3 +18,10 @@
 // masterclass
 @use '../sass/masterclass/masterclass-hero';
 @use '../sass/masterclass/masterclass-section';
+
+// registration
+@use '../sass//registration-form/hero-section';
+@use '../sass/registration-form/reg-form';
+
+// success page
+@use '../sass/success/success';

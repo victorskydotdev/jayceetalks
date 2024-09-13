@@ -1,0 +1,49 @@
+@import '../resets';
+
+.reg-hero {
+	margin-bottom: 4em;
+	position: relative;
+	height: 250px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.fixed-reg-img {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: #000;
+			opacity: 0.5;
+		}
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+
+		.heading {
+			color: #fff;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			.heading {
+				text-align: center;
+			}
+		}
+	}
+}

@@ -3,8 +3,123 @@ title: Register for "Getting stage-ready" Masterclass
 layout: 'base.njk'
 ---
 
+<main class="reg-hero">
+	<div class="fixed-reg-img">
+		<img src="/assets/slider-imgs/img5.jpg" alt="" />
+	</div>
+	<div class="container">
+		<h1 class="heading">Register for "Getting stage-ready" Masterclass</h1>
+	</div>
+</main>
+
 <section class="form-section">
 	<div class="container">
-		<form action="" name="registration-form" class="form"></form>
+		<form action="/reg-success" name="registration-form" class="form" netlify>
+			<div class="contact-info">
+				<div class="heading-wrap">
+					<h4 class="title">Your contact information</h4>
+				</div>
+
+				<div class="input-wrap">
+					<input
+						type="text"
+						name="applicantName"
+						placeholder="Your full name"
+						required />
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="johndoe@email.com"
+						required />
+					<input type="text" name="phone" placeholder="0810 349 2345" />
+					<input type="text" placeholder="Address" name="address" required />
+				</div>
+			</div>
+
+			<div class="experience">
+				<div class="heading-wrap">
+					<h4 class="title">Experience</h4>
+				</div>
+
+				<div class="input-wrap">
+					<input
+						type="text"
+						name="number of years active"
+						placeholder="How long have you been working as an Emcee?"
+						required />
+					<input
+						type="text"
+						name="types of events"
+						placeholder="Types of events hosted"
+						required />
+					<input
+						type="text"
+						name="number of events per month"
+						placeholder="Number of events hosted per month?"
+						required />
+				</div>
+			</div>
+
+			<div class="goals">
+				<div class="heading-wrap">
+					<h4 class="title">Goals</h4>
+				</div>
+
+				<div class="input-wrap">
+					<input
+						type="text"
+						placeholder="your intended goal for this masterclass"
+						name="goal"
+						required />
+
+					<input
+						type="text"
+						name="specific area of improvement"
+						placeholder="Specific areas you want to improve?"
+						required />
+				</div>
+			</div>
+
+			<div class="availability">
+				<div class="heading-wrap">
+					<h4 class="title">Availability</h4>
+				</div>
+
+				<div class="input-wrap">
+					<input
+						type="text"
+						name="available to attend"
+						placeholder="Are you available to attend? Yes | No"
+						required />
+					<input
+						type="text"
+						name="scheduling conflicts"
+						placeholder="Do you have any scheduling conflicts or limitations? Yes | No"
+						required />
+				</div>
+			</div>
+
+			<div class="tech-requirements">
+				<div class="heading-wrap">
+					<h4 class="title">Availability</h4>
+				</div>
+
+				<div class="input-wrap">
+					<input
+						type="text"
+						name="access to computer"
+						placeholder="Do you have access to a computer of tab? Yes | No"
+						required />
+					<input
+						type="text"
+						name="digital tools comfortability"
+						placeholder="Are you comfortable using digital tools"
+						required />
+				</div>
+			</div>
+
+			<button class="btn" type="submit">Submit form</button>
+		</form>
 	</div>
 </section>

@@ -1,0 +1,43 @@
+@import '../resets';
+
+.form-section {
+	min-height: fit-content;
+
+	.container {
+		@include sm-widthSize();
+
+		.form {
+			display: grid;
+			gap: 1.5em;
+
+			div {
+				.heading-wrap {
+					margin-bottom: 1em;
+				}
+
+				.input-wrap {
+					display: grid;
+					gap: 0.4em;
+
+					input {
+						width: 100%;
+						padding: 0.5em 1.5em;
+					}
+				}
+			}
+
+			.btn {
+				@include btn();
+
+				&:hover {
+					background: rgba(252, 213, 20, 0.74);
+				}
+
+				@media screen and (min-width: 43em) {
+					display: inline-block;
+					width: fit-content;
+				}
+			}
+		}
+	}
+}
