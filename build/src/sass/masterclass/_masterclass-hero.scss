@@ -44,10 +44,17 @@
 			}
 		}
 
+		.masterclass-img {
+			background: url('/assets/masterclas.jpg') center/cover, no-repeat;
+			height: 600px;
+			width: 100%;
+		}
+
 		.img-wrap {
 			background: url('/assets/mh-img2.jpg') center/cover, no-repeat;
 			height: 400px;
 			width: 100%;
+			display: none;
 		}
 	}
 
@@ -60,6 +67,18 @@
 				.heading {
 					font-size: 3rem;
 				}
+			}
+
+			.masterclass-img {
+				position: absolute;
+				height: 400px;
+				width: 300px;
+				left: 0;
+				top: 40%;
+			}
+
+			.img-wrap {
+				display: block;
 			}
 		}
 	}
@@ -85,6 +104,14 @@
 				margin: unset;
 				padding-left: 4em;
 				height: 600px;
+			}
+
+			.masterclass-img {
+				left: unset;
+				right: 10%;
+				top: 15%;
+				width: 400px;
+				height: 500px;
 			}
 
 			.img-wrap {

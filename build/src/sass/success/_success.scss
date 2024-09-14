@@ -44,9 +44,23 @@
 		}
 
 		.payment-wrap {
-			a {
-				@include btn();
-				margin-bottom: 0.4em;
+			.link-wrap {
+				display: flex;
+				justify-content: center;
+				gap: 0.7rem;
+				margin-bottom: 0.5em;
+
+				a {
+					@include btn();
+					// margin-bottom: 0.4em;
+				}
+
+				.account-btn {
+					@include btn();
+					background: transparent;
+					color: #fff;
+					border: 2px solid #fff;
+				}
 			}
 
 			.text {

@@ -12,15 +12,17 @@ const animateImg = document.getElementById('animate-img');
 // const reviewAnimation = document.getElementById('review-animation');
 
 document.addEventListener('DOMContentLoaded', function () {
-	// Add the class to trigger the animation
-	masthead.classList.add('animate-fade-in');
-	subHeading.classList.add('animate-fade-in2');
-	mastheadBtn.classList.add('animate-fade-in3');
+	if (masthead && animateImg) {
+		// Add the class to trigger the animation
+		masthead.classList.add('animate-fade-in');
+		subHeading.classList.add('animate-fade-in2');
+		mastheadBtn.classList.add('animate-fade-in3');
 
-	// adding review animation class to review slider
-	// reviewAnimation.classList.add('sliderAnimation');
+		// adding review animation class to review slider
+		// reviewAnimation.classList.add('sliderAnimation');
 
-	animateImg.classList.add('animate-img');
+		animateImg.classList.add('animate-img');
+	}
 });
 
 const changeNavShadow = () => {
@@ -94,3 +96,41 @@ for (let j = 0; j < linkModalClostBtn.length; j++) {
 		});
 	}
 }
+
+const accNumPopup = document.querySelector('.account-num-popup');
+const accPopCloseBtn = document.querySelector('.account-close-btn');
+const accContentWrap = document.querySelector('.account-content');
+
+const accNumContent = `
+	<div class="text-wrap">
+		<p class="bank-name"> <i class="fa-solid fa-building-columns"></i>
+			Pay into Access/Diamond Bank (0079249187)</p>
+		<p class="account-name"><i class="fa-solid fa-user"></i> Opara Jude</p>
+		<p class="amount"><i class="fa-solid fa-money-bill-wave"></i> N15,000 (Early Bird)</p>
+		<p class="amount2"><i class="fa-solid fa-clock"></i> N30,000 (Late Payment)</p>
+
+		<a class="confirm-payment-btn" href="https://wa.me/+2347064932563">Click here to confirm payment</a>
+	</div>
+`;
+
+function showAccNum() {
+	if (accNumPopup) {
+		const accBtn = document
+			.querySelector('.account-btn')
+			.addEventListener('click', () => {
+				accNumPopup.style.display = 'flex';
+				accContentWrap.innerHTML += accNumContent;
+			});
+
+		accPopCloseBtn.addEventListener('click', () => {
+			accNumPopup.style.display = 'none';
+
+			// removing the content following the closing of the modal
+			accContentWrap.innerHTML = '';
+		});
+	}
+}
+
+showAccNum();
+
+// console.log(accContentWrap, accNumPopup, accPopCloseBtn);

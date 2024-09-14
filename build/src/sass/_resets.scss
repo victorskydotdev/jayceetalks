@@ -22,6 +22,7 @@ html {
 body {
 	font-family: $font-family;
 	overflow-x: hidden;
+	position: relative;
 }
 
 a {
@@ -54,4 +55,5 @@ li {
 	display: inline-block;
 	cursor: pointer;
 	font-weight: 500;
+	text-transform: capitalize;
 }

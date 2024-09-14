@@ -1,0 +1,54 @@
+@import '../resets';
+
+.account-num-popup {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.685);
+	backdrop-filter: blur(10px);
+	z-index: 30;
+	width: 100%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	.account-close-btn {
+		background: red;
+		height: 40px;
+		width: 40px;
+		border-radius: 100%;
+		position: fixed;
+		right: 5%;
+		top: 5%;
+		cursor: pointer;
+		border: none;
+		color: #fff;
+	}
+
+	.account-content {
+		width: 90%;
+		margin: 0 auto;
+		height: fit-content;
+		background: #fff;
+		padding: 2em 0;
+		border-radius: 20px;
+
+		.text-wrap {
+			width: 90%;
+			margin: 0 auto;
+
+			.amount2 {
+				margin-bottom: 1em;
+			}
+
+			.confirm-payment-btn {
+				@include btn();
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 40%;
+		}
+	}
+}
