@@ -104,8 +104,8 @@ const accContentWrap = document.querySelector('.account-content');
 const accNumContent = `
 	<div class="text-wrap">
 		<p class="bank-name"> <i class="fa-solid fa-building-columns"></i>
-			Pay into Access/Diamond Bank (0079249187)</p>
-		<p class="account-name"><i class="fa-solid fa-user"></i> Opara Jude</p>
+			Pay into UBA Bank (2238817863)</p>
+		<p class="account-name"><i class="fa-solid fa-user"></i> Okpara Jude Chizaram</p>
 		<p class="amount"><i class="fa-solid fa-money-bill-wave"></i> N15,000 (Early Bird)</p>
 		<p class="amount2"><i class="fa-solid fa-clock"></i> N30,000 (Late Payment)</p>
 
